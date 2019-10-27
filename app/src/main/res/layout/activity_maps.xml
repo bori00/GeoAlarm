@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/SettingsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_settings"
+        android:visibility="visible"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/setRadiusBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/SettingsBtn"
+                android:layout_marginRight="72dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_radius" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/otherSettingsBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/SettingsBtn"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="36dp"
+                android:layout_marginBottom="72dp"
+                android:visibility="invisible"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_gotosettings" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/eraseTargetBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@+id/SettingsBtn"
+                android:layout_marginLeft="72dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="invisible"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_trashcan" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/saveTargetBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@+id/SettingsBtn"
+                android:layout_marginLeft="36dp"
+                android:layout_marginBottom="72dp"
+                android:visibility="invisible"
+                android:clickable="true"
+                app:srcCompat="@android:drawable/ic_menu_save" />
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="60dp"
+        tools:context=".MapsActivity" />
+
+    <RelativeLayout
+        android:id="@+id/relLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/white_border"
+        android:elevation="10dp">
+
+        <ImageView
+            android:id="@+id/ic_magnify"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_magnify" />
+
+        <EditText
+            android:id="@+id/input_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@id/ic_magnify"
+            android:hint="Enter Address"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:inputType="text"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

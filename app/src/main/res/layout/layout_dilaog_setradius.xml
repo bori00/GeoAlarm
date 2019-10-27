@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <SeekBar
+        android:id="@+id/radiusSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/maxValue"
+        android:layout_toRightOf="@id/minValue"
+        android:layout_centerInParent="true"
+        android:max="1000"
+        android:min="1" />
+
+    <TextView
+        android:id="@+id/radiusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/minValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:text="     1"/>
+
+    <TextView
+        android:id="@+id/maxValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text = "1000 "/>
+
+
+
+    <RadioGroup
+        android:id="@+id/radiusRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/radiusSeekBar"
+        android:layout_marginTop="72dp">
+
+        <RadioButton
+            android:id="@+id/radioBtnMeters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="m" />
+
+        <RadioButton
+            android:id="@+id/radioBtnKilometers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="km" />
+
+
+    </RadioGroup>
+
+
+
+
+</RelativeLayout>
+
